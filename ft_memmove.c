@@ -6,7 +6,7 @@
 /*   By: rchahban <rchahban@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 02:02:05 by rchahban          #+#    #+#             */
-/*   Updated: 2022/10/15 23:24:11 by rchahban         ###   ########.fr       */
+/*   Updated: 2022/10/23 18:33:10 by rchahban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,19 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char *dst1; 
-	char *src1;
+	char	*dst1;
+	char	*src1;
+
 	dst1 = (char *)dst;
 	src1 = (char *)src;
-	if(dst1 > src1)
+	if (dst1 > src1)
 	{
 		while (len)
 		{
-			dst1[len-1] = src1[len-1];
+			dst1[len - 1] = src1[len - 1];
 			len--;
 		}
-		return dst1;
+		return (dst1);
 	}
-	return ft_memcpy(dst1, src1, len);
+	return (ft_memcpy(dst1, src1, len));
 }
